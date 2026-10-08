@@ -6,6 +6,13 @@ Route::get('/', function () {
     return response()->json([
         'message' => 'Laravel deployment: successfully deployed',
         'status' => 'ok',
+        'user_details_api' => [
+            'list' => 'GET /api/user-details',
+            'create' => 'POST /api/user-details',
+            'show' => 'GET /api/user-details/{id}',
+            'update' => 'PUT|PATCH /api/user-details/{id}',
+            'delete' => 'DELETE /api/user-details/{id}',
+        ],
     ]);
 });
 
