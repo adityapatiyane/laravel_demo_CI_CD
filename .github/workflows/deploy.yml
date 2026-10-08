@@ -21,5 +21,5 @@ jobs:
           script: |
             cd /home/ubuntu/laravel_demo_CI_CD
             git pull origin master
-            php artisan optimize:clear
             docker-compose up -d --build
+            docker compose exec -T app php artisan optimize:clear
