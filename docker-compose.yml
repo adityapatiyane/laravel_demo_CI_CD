@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: laravel-demo-ci-cd
+    ports:
+      - 8000:8000
+    restart: unless-stopped
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:1sm9WsIFYK4bu1hRbpck3rjSXvkaxMzMZA2cnUCEVGM=
+      - SESSION_DRIVER=file
+      - CACHE_STORE=file
+      - QUEUE_CONNECTION=sync
